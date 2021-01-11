@@ -8,4 +8,4 @@
 
     assign tri_out = enable ? tri_in : 1'bz;
 
-![inferred](inferred_.png)
+![inferred](inferred_tri.png)
