@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Mon Jan 11 16:48:41 2021
+[*]
+[dumpfile] "/home/matt/work/asic-workshop/mph-tristate-test/test.vcd"
+[dumpfile_mtime] "Mon Jan 11 16:48:30 2021"
+[dumpfile_size] 465
+[savefile] "/home/matt/work/asic-workshop/mph-tristate-test/test.gtk"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-16.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 272
+[signals_width] 135
+[sst_expanded] 1
+[sst_vpaned_height] 146
+@28
+test.clk
+test.enable
+test.tri_in
+@29
+test.tri_out
+[pattern_trace] 1
+[pattern_trace] 0
