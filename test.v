@@ -5,20 +5,17 @@
 `define UNIT_DELAY #1
 `define USE_POWER_PINS
 
-//`include "libs.ref/sky130_fd_io/verilog/sky130_fd_io.v"
-//`include "libs.ref/sky130_fd_io/verilog/sky130_ef_io.v"
-//`include "libs.ref/sky130_fd_io/verilog/sky130_ef_io__gpiov2_pad_wrapped.v"
 
+`ifndef FORMAL
 `include "libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
 `include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
-`include "libs.ref/sky130_fd_sc_hvl/verilog/primitives.v"
-`include "libs.ref/sky130_fd_sc_hvl/verilog/sky130_fd_sc_hvl.v"
+`endif
 
 module test (
     input wire clk,
-    input wire enable,
-    input wire tri_in,
-    output wire tri_out
+    input wire reset,
+    input wire [7:0] tri_in,
+    output wire [7:0] tri_out
     );
 
     `ifdef COCOTB_SIM
@@ -32,10 +29,15 @@ module test (
     // hand placed
     // example taken from https://github.com/shalan/DFFRAM/blob/main/Handcrafted/Models/DFFRAMBB.v#L205
     // https://antmicro-skywater-pdk-docs.readthedocs.io/en/86-cell_cross_index/contents/libraries/sky130_fd_sc_hd/cells/ebufn/README.html
-    sky130_fd_sc_hd__ebufn_4 tri_buf (
-        .A( tri_in ),
+    wire [7:0] enable_n = {8{reset}};
+
+
+    // can't get this to work with formal tools due to issues in the standard cell libs
+    `ifndef FORMAL 
+    sky130_fd_sc_hd__ebufn_4 tri_buf[7:0] (
+        .A(tri_in),
         .Z(tri_out),
-        .TE_B(!enable),
+        .TE_B(enable_n),
         .VPWR(1'b1),
         .VGND(1'b0),
         .VPB(1'b1),
@@ -43,6 +45,10 @@ module test (
         );
 
     // inferred
-//    assign tri_out = enable ? tri_in : 1'bz;
+    `else
+    assign tri_out = enable_n ? tri_in : 8'bz;
+    `include "properties.v"
+    `endif
     
 endmodule
+`default_nettype wire

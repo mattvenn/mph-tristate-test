@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal test.v
+prep -top test
+
+[files]
+test.v
+properties.v
