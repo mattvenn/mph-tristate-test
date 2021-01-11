@@ -1,5 +1,5 @@
 [options]
-mode prove
+mode bmc
 
 [engines]
 smtbmc
@@ -10,4 +10,5 @@ prep -top test
 
 [files]
 test.v
-properties.v
+/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
+/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v

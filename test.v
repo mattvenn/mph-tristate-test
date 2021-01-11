@@ -6,10 +6,10 @@
 `define USE_POWER_PINS
 
 
-`ifndef FORMAL
-`include "libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
-`include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
-`endif
+//`include "libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
+//`include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
+`include "/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
+`include "/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
 
 module test (
     input wire clk,
