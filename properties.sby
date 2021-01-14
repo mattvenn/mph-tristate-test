@@ -1,14 +1,14 @@
 [options]
-mode bmc
+mode prove
 
 [engines]
 smtbmc
 
 [script]
-read -formal test.v
-prep -top test
+read -formal wrapper.v seven_segment_seconds.v
+prep -top wrapper
 
 [files]
-test.v
-/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
-/home/matt/work/asic-workshop/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
+wrapper.v
+properties.v
+seven_segment_seconds/seven_segment_seconds.v
