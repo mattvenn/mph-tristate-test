@@ -50,7 +50,7 @@ module wrapper (
     seven_segment_seconds seven_segment_seconds (.clk(wb_clk_i), .reset(la_data_in[25]), .led_out(buf_io_out[14:8]), .compare_in(la_data_in[23:0]), .update_compare(la_data_in[24]));
 
     `ifdef FORMAL
-        `include "properties.v"
+    `include "properties.v"
     `endif
 
 endmodule 
