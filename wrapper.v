@@ -1,6 +1,6 @@
 `default_nettype none
 `ifdef FORMAL
-    `define MPRJ_IO_PADS 40    
+    `define MPRJ_IO_PADS 38    
 `endif
 module wrapper (
     // interface as user_proj_example.v
@@ -37,21 +37,27 @@ module wrapper (
     wire [`MPRJ_IO_PADS-1:0] buf_io_out;
     wire [`MPRJ_IO_PADS-1:0] buf_io_oeb;
 
+    `ifdef FORMAL
+    // formal can't deal with z, so set all outputs to 0 if not active
+    assign wbs_ack_o    = active ? buf_wbs_ack_o    : 1'b0;
+    assign wbs_dat_o    = active ? buf_wbs_dat_o    : 32'b0;
+    assign la_data_out  = active ? buf_la_data_out  : 32'b0;
+    assign io_out       = active ? buf_io_out       : `MPRJ_IO_PADS'b0;
+    assign io_oeb       = active ? buf_io_oeb       : `MPRJ_IO_PADS'b0;
+    `include "properties.v"
+    `else
     // tristate buffers
     assign wbs_ack_o    = active ? buf_wbs_ack_o    : 1'bz;
     assign wbs_dat_o    = active ? buf_wbs_dat_o    : 32'bz;
     assign la_data_out  = active ? buf_la_data_out  : 32'bz;
     assign io_out       = active ? buf_io_out       : `MPRJ_IO_PADS'bz;
     assign io_oeb       = active ? buf_io_oeb       : `MPRJ_IO_PADS'bz;
+    `endif
 
     // permanently set oeb so that outputs are always enabled: 0 is output, 1 is high-impedance
     assign buf_io_oeb = `MPRJ_IO_PADS'h0;
     // instantiate your module here, connecting what you need of the above signals
     seven_segment_seconds seven_segment_seconds (.clk(wb_clk_i), .reset(la_data_in[25]), .led_out(buf_io_out[14:8]), .compare_in(la_data_in[23:0]), .update_compare(la_data_in[24]));
-
-    `ifdef FORMAL
-    `include "properties.v"
-    `endif
 
 endmodule 
 `default_nettype wire

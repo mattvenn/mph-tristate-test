@@ -7,10 +7,10 @@ always @(*) begin
         iooebbuf : assert(io_oeb       == buf_io_oeb);
     end
     if(!active) begin
-        wbsackz  : assert(wbs_ack_o    == 1'bz);
-        wbsdatz  : assert(wbs_dat_o    == 32'bz);
-        ladataz  : assert(la_data_out  == 32'bz);
-        iooutz   :  assert(io_out       == `MPRJ_IO_PADS'bz);
-        iooebz   :  assert(io_oeb       == `MPRJ_IO_PADS'bz);
+        wbsackz  : assert(wbs_ack_o    == 1'b0);
+        wbsdatz  : assert(wbs_dat_o    == 32'b0);
+        ladataz  : assert(la_data_out  == 32'b0);
+        iooutz   :  assert(io_out       == `MPRJ_IO_PADS'b0);
+        iooebz   :  assert(io_oeb       == `MPRJ_IO_PADS'b0);
     end
 end
