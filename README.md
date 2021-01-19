@@ -31,7 +31,7 @@
 ## Individual wrapper results
 
 * wrapper.v tested with simple 7 segment demo. 
-* used config to make die size 200um x 200um
+* used [config](configs/wrapper/config.tcl) to make die size 200um x 200um
 
 ### wrapper : DESIGN=wrapper RUN_DATE=14-01_15-49
 
@@ -68,6 +68,8 @@ Picture shows output pin connecting to an ebuf tristate cell.
 ![gds-ebuf](docs/ebuf-gds.png)
 
 Yosys [cell usage report](docs/yosys_2.stat.rpt) includes 141 [sky130_fd_sc_hd__ebufn_2 tristate buffers](https://antmicro-skywater-pdk-docs.readthedocs.io/en/86-cell_cross_index/contents/libraries/sky130_fd_sc_hd/cells/ebufn/README.html) in use for individual wrapper macro.
+
+Some [config](configs/user_project_wrapper) were created with Python [placer.py](configs/user_project_wrapper/placer.py) script.
 
 ## To resolve
 
