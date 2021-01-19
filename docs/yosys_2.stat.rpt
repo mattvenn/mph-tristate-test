@@ -1,0 +1,38 @@
+
+22. Printing statistics.
+
+=== wrapper ===
+
+   Number of wires:                751
+   Number of wire bits:           1051
+   Number of public wires:          76
+   Number of public wire bits:     376
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                875
+     sky130_fd_sc_hd__a2111o_4       1
+     sky130_fd_sc_hd__a211o_4       35
+     sky130_fd_sc_hd__a21bo_4        4
+     sky130_fd_sc_hd__a21o_4         9
+     sky130_fd_sc_hd__a2bb2o_4       7
+     sky130_fd_sc_hd__and2_4        19
+     sky130_fd_sc_hd__and3_4        20
+     sky130_fd_sc_hd__and4_4         2
+     sky130_fd_sc_hd__buf_2        203
+     sky130_fd_sc_hd__conb_1       134
+     sky130_fd_sc_hd__dfxtp_4       52
+     sky130_fd_sc_hd__ebufn_2      141
+     sky130_fd_sc_hd__inv_2        107
+     sky130_fd_sc_hd__nand2_4        9
+     sky130_fd_sc_hd__nor2_4        26
+     sky130_fd_sc_hd__o21a_4        10
+     sky130_fd_sc_hd__o21ai_4        3
+     sky130_fd_sc_hd__o22a_4        17
+     sky130_fd_sc_hd__o32a_4         1
+     sky130_fd_sc_hd__or2_4         43
+     sky130_fd_sc_hd__or3_4          9
+     sky130_fd_sc_hd__or4_4         23
+
+   Chip area for module '\wrapper': 7783.715200
+
