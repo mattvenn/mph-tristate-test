@@ -24,6 +24,8 @@
 ![schematic](docs/mph.jpg)
 
 * Each project gets instantiated inside the [wrapper.v](wrapper.v)
+* Wrapper provides unified interface with ~320 pins: all IO, all wishbone, reduced logic analyser (logic analyser is firmware controlled by [caravel harness picorv32](https://github.com/efabless/caravel)).
+* Individual wrappers are activated by [logic analyser pins](https://github.com/mattvenn/tristate-test/blob/ee7369ed6f704a73b9106e8bdbadb4eda9e9325b/user_project_wrapper.v#L133) not connected to the wrapper.
 * All the wrappers get instantiated by [user_project_wrapper.v](user_project_wrapper.v) (this is part of the Efabless harness and can't be changed.
 
 ## Simulation
