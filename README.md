@@ -2,21 +2,21 @@
 
 ## Aim
 
-* Allow many (<20) designers to submit a small design to the Google/Efabless/Skywater ASIC  shuttle
-* Compartmentalise the designs and allow them to be activated in turn
-* Each design should have access to all the I/O
+* Allow many (<20) designers to combine their small design into a single application to the Google/Efabless/Skywater ASIC  shuttle.
+* Compartmentalise the designs and allow them to be activated in turn.
+* Each design should have access to all the I/O and [Caravel](https://github.com/efabless/caravel) wishbone bus.
 
-## Last version
+## Version 1 issues
 
 * The last version (submitted on first shuttle) used a MUX, which had a star topology. 
-* Due to restrictions in the OpenLANE ASIC flow, all the designs have to be instantiated at the top level, then routed out to the MUX, then back to the IO.
+* Due to restrictions in the OpenLANE ASIC flow, all the designs had to be instantiated at the top level, then routed out to the MUX, then back to the IO.
 * Each design had a different interface that required a unique instantiation. This was pretty ugly and prone to errors. 
 * The MUX block had to be long and thin to fit all the pins (~3k) around the edges.
 
 ## Improvements
 
-* Unify interface
-* Use bus topology with tristated outputs on each design
+* Unify interface.
+* Use bus topology with tristated outputs on each design, reducing routing congestion.
 * Formal [proof of tristate](properties.v) that can be run as part of CI.
 
 ## Proposal
