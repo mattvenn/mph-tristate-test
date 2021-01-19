@@ -1,0 +1,16 @@
+add_macro_placement proj_0 265 340 N
+add_macro_placement proj_1 265 1220 N
+add_macro_placement proj_2 265 2100 N
+add_macro_placement proj_3 265 2980 N
+add_macro_placement proj_4 995 340 N
+add_macro_placement proj_5 995 1220 N
+add_macro_placement proj_6 995 2100 N
+add_macro_placement proj_7 995 2980 N
+add_macro_placement proj_8 1725 340 N
+add_macro_placement proj_9 1725 1220 N
+add_macro_placement proj_10 1725 2100 N
+add_macro_placement proj_11 1725 2980 N
+add_macro_placement proj_12 2455 340 N
+add_macro_placement proj_13 2455 1220 N
+add_macro_placement proj_14 2455 2100 N
+add_macro_placement proj_15 2455 2980 N

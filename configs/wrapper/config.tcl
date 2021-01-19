@@ -10,6 +10,9 @@ set ::env(VERILOG_FILES) "\
 set ::env(CLOCK_PERIOD) "10"
 set ::env(CLOCK_PORT) "wb_clk_i"
 
+set ::env(FP_SIZING) absolute                                                                                                                         
+set ::env(DIE_AREA) "0 0 200 200"
+
 set ::env(CELL_PAD) 4
 
 # we are a macro
