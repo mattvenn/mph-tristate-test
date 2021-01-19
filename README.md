@@ -45,7 +45,7 @@ Initial results look good. The OpenLANE flow was able to route 16 designs with o
 
 Picture shows output pin connecting to an ebuf tristate cell.
 
-![gds-ebuf](docs/gds-ebuf.png)
+![gds-ebuf](docs/ebuf-gds.png)
 
 Yosys [cell usage report](docs/yosys_2.stat.rpt) includes tristate buffers in use for individual wrapper macro.
 
