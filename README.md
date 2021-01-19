@@ -28,6 +28,26 @@
 * Individual wrappers are activated by [logic analyser pins](https://github.com/mattvenn/tristate-test/blob/ee7369ed6f704a73b9106e8bdbadb4eda9e9325b/user_project_wrapper.v#L133) not connected to the wrapper.
 * All the wrappers get instantiated by [user_project_wrapper.v](user_project_wrapper.v) (this is part of the Efabless harness and can't be changed.
 
+## Individual wrapper results
+
+* wrapper.v tested with simple 7 segment demo. 
+* used config to make die size 200um x 200um
+
+### wrapper : DESIGN=wrapper RUN_DATE=14-01_15-49
+
+        tritonRoute_violations :                    0
+              Short_violations :                    0
+             MetSpc_violations :                    0
+            OffGrid_violations :                    0
+            MinHole_violations :                    0
+              Other_violations :                    0
+              Magic_violations :                    0
+            antenna_violations :                    1
+              lvs_total_errors :                    0
+              cvc_total_errors :                    0
+
+width x height 200 um
+
 ## Simulation
 
 Simulation shows startup, no design active, 1st design active, 2nd design active.
@@ -37,7 +57,7 @@ Simulation shows startup, no design active, 1st design active, 2nd design active
 
 ![simulation](docs/simulation.png)
 
-## OpenLANE Results
+## OpenLANE Results - user_project_wrapper with 16 projects 
 
 Initial results look good. The OpenLANE flow was able to route 16 designs with only a few errors that are currently being investigated.
 
@@ -53,6 +73,8 @@ Yosys [cell usage report](docs/yosys_2.stat.rpt) includes 141 [sky130_fd_sc_hd__
 
 * [Yosys report](docs/yosys_.chk.rpt) reports multiple conflicting drivers for all the tristated outputs.
 * run a gate level simulation
+* 25 DRC issues
+* netlist match LVS issues
 
 # Design Review
 
