@@ -41,6 +41,12 @@ Initial results look good. The OpenLANE flow was able to route 16 designs with o
 
 ![gds](docs/gds.png)
 
+
+## To resolve
+
+* [Yosys report](docs/yosys_.chk.rpt) reports multiple conflicting drivers for all the tristated outputs.
+* run a gate level simulation
+
 # Design Review
 
 ## Ahmed
