@@ -47,7 +47,7 @@ Picture shows output pin connecting to an ebuf tristate cell.
 
 ![gds-ebuf](docs/ebuf-gds.png)
 
-Yosys [cell usage report](docs/yosys_2.stat.rpt) includes tristate buffers in use for individual wrapper macro.
+Yosys [cell usage report](docs/yosys_2.stat.rpt) includes 141 [sky130_fd_sc_hd__ebufn_2 tristate buffers](https://antmicro-skywater-pdk-docs.readthedocs.io/en/86-cell_cross_index/contents/libraries/sky130_fd_sc_hd/cells/ebufn/README.html) in use for individual wrapper macro.
 
 ## To resolve
 

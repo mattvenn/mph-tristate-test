@@ -46,7 +46,7 @@ module wrapper (
     assign io_oeb       = active ? buf_io_oeb       : `MPRJ_IO_PADS'b0;
     `include "properties.v"
     `else
-    // tristate buffers
+    // 141 tristate buffers
     assign wbs_ack_o    = active ? buf_wbs_ack_o    : 1'bz;
     assign wbs_dat_o    = active ? buf_wbs_dat_o    : 32'bz;
     assign la_data_out  = active ? buf_la_data_out  : 32'bz;
