@@ -8,3 +8,6 @@ VERILOG_SOURCES = user_project_wrapper.lvs.powered.v wrapper.lvs.powered.v
 COMPILE_ARGS=-I /home/matt/work/asic-workshop/pdks/sky130A/ -DSIM -DFUNCTIONAL -DMPRJ_IO_PADS=38    
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
+
+yosys:
+	yosys -p 'read_verilog -DMPRJ_IO_PADS=38 user_project_wrapper.v wrapper.v seven_segment_seconds/seven_segment_seconds.v; prep -top user_project_wrapper'
