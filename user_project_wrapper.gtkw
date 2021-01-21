@@ -1,30 +1,29 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Mon Jan 18 11:11:40 2021
+[*] Thu Jan 21 10:27:48 2021
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/mph-tristate-test/user_project_wrapper.vcd"
-[dumpfile_mtime] "Mon Jan 18 11:08:46 2021"
-[dumpfile_size] 54743
+[dumpfile_mtime] "Thu Jan 21 10:27:10 2021"
+[dumpfile_size] 38308929
 [savefile] "/home/matt/work/asic-workshop/mph-tristate-test/user_project_wrapper.gtkw"
 [timestart] 0
-[size] 2286 1350
-[pos] -134 -10
-*-19.000000 2550000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 2488 1529
+[pos] -1 -1
+*-16.000000 211600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] user_project_wrapper.
 [treeopen] user_project_wrapper.proj_0.
 [treeopen] user_project_wrapper.proj_1.
-[treeopen] user_project_wrapper.proj_1.seven_segment_seconds.
 [sst_width] 273
 [signals_width] 578
 [sst_expanded] 1
 [sst_vpaned_height] 397
-@29
+@28
 user_project_wrapper.wb_clk_i
 user_project_wrapper.wb_rst_i
-@23
+@22
 user_project_wrapper.io_in[37:0]
 user_project_wrapper.io_oeb[37:0]
-@c00023
+@800023
 user_project_wrapper.io_out[37:0]
 @29
 (0)user_project_wrapper.io_out[37:0]
@@ -65,38 +64,22 @@ user_project_wrapper.io_out[37:0]
 (35)user_project_wrapper.io_out[37:0]
 (36)user_project_wrapper.io_out[37:0]
 (37)user_project_wrapper.io_out[37:0]
-@1401201
+@1001201
 -group_end
-@23
+@22
 user_project_wrapper.la_data_in[127:0]
 user_project_wrapper.la_data_out[127:0]
 @200
 -
 @800200
 -proj 0
-@29
+@28
+user_project_wrapper.proj_0.VPWR
+user_project_wrapper.proj_0.VGND
 user_project_wrapper.proj_0.active
-user_project_wrapper.proj_0.seven_segment_seconds.clk
-@23
-user_project_wrapper.proj_0.seven_segment_seconds.compare_in[23:0]
-@29
-user_project_wrapper.proj_0.seven_segment_seconds.update_compare
-user_project_wrapper.proj_0.seven_segment_seconds.reset
-@23
-user_project_wrapper.proj_0.seven_segment_seconds.digit[3:0]
-user_project_wrapper.proj_0.seven_segment_seconds.led_out[6:0]
 @1000200
 -proj 0
-@29
+@28
 user_project_wrapper.proj_1.active
-user_project_wrapper.proj_1.seven_segment_seconds.clk
-@23
-user_project_wrapper.proj_1.seven_segment_seconds.compare_in[23:0]
-@29
-user_project_wrapper.proj_1.seven_segment_seconds.update_compare
-user_project_wrapper.proj_1.seven_segment_seconds.reset
-@23
-user_project_wrapper.proj_1.seven_segment_seconds.digit[3:0]
-user_project_wrapper.proj_1.seven_segment_seconds.led_out[6:0]
 [pattern_trace] 1
 [pattern_trace] 0

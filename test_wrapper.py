@@ -22,19 +22,21 @@ async def test_tri(dut):
     clock = Clock(dut.wb_clk_i, 10, units="ns")
     cocotb.fork(clock.start())
 
+    dut.vssd1 <= 0
+    dut.vccd1 <= 1
     dut.wb_rst_i <= 1
     await ClockCycles(dut.wb_clk_i, 5)
     dut.wb_rst_i <= 0
     dut.la_data_in <= 0
 
-    await ClockCycles(dut.wb_clk_i, 100)
+    await ClockCycles(dut.wb_clk_i, 10)
 
     # activate proj0
-    await activate_project(dut, 0, 10)
+    await activate_project(dut, 0, 1)
 
-    await ClockCycles(dut.wb_clk_i, 120)
+    await ClockCycles(dut.wb_clk_i, 10)
 
     # activate proj1
-    await activate_project(dut, 1, 5)
+    await activate_project(dut, 1, 2)
 
-    await ClockCycles(dut.wb_clk_i, 120)
+    await ClockCycles(dut.wb_clk_i, 10)
