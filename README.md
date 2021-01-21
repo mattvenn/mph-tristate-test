@@ -94,3 +94,15 @@ Some [config](configs/user_project_wrapper) were created with Python [placer.py]
 * use opendb to do the bus routing and connections?
 * esd diodes on inputs + buffers of tri block for protection and isolation
 * looks good
+
+# Log
+
+## Wed 20 Jan 16:07:20 CET 2021
+
+Trying to solve the 30->60 shorts I'm getting with tritonroute
+
+* tried telling tritonroute to use less resources on the first 2 layers:
+    set ::env(GLB_RT_L2_ADJUSTMENT) 0.2
+    set ::env(GLB_RT_L3_ADJUSTMENT) 0.2
+* tried setting pin order, made little difference
+* tried increasing die size to 300um x 300um to increase distance between pins
