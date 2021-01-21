@@ -5,6 +5,13 @@
 `include "libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
 
 module top(clk, rst, sig_in, sig_out, VPWR, VGND, active);
+    `ifdef COCOTB_SIM
+        initial begin
+            $dumpfile ("minimal.vcd");
+            $dumpvars (0, top);
+            #1;
+        end
+    `endif
   input VGND;
   input VPWR;
   wire _00_;
