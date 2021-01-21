@@ -106,3 +106,11 @@ Trying to solve the 30->60 shorts I'm getting with tritonroute
     set ::env(GLB_RT_L3_ADJUSTMENT) 0.2
 * tried setting pin order, made little difference
 * tried increasing die size to 300um x 300um to increase distance between pins
+
+## Thu 21 Jan 13:22:42 CET 2021
+
+* made a minimal example in minimal branch, all contained in one module
+* ran openlane and got no warnings
+* Gate level simulation works, must provide power
+* tried gatelevel sim of user_project_wrapper, works
+* think that the warnings are because wrappers are already hardened and bboxed, so yosys doesn't know they are tristated outs
